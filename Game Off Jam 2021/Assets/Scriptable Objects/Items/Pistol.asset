@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c60013a2d13c974db65806d051cc7d0, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4886363918456236381, guid: 220cc325fe76abd4ba8bfec54fe7d383, type: 3}
+  type: 0
+  description: Bullets go pew pew
+  damage: 15
+  shotPoint: {fileID: 0}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0692c9483ab4d6468b42b0f50167bba, type: 3}
+  m_Name: Sword of Death
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4886363918456236381, guid: 5e18bd12a7d6ad14d8678fa4f195c529, type: 3}
+  type: 2
+  description: Hahahah u died noob
+  damage: 12
+  attackRange: 2
