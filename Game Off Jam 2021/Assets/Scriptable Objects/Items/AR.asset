@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c60013a2d13c974db65806d051cc7d0, type: 3}
   m_Name: AR
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4886363918456236381, guid: 65be17b67c17d9f46abc40b3791c12d3, type: 3}
+  id: 0
+  uiIcon: {fileID: 21300000, guid: 0f91d8417abeac54d95d965fc834953c, type: 3}
   type: 0
   description: Bullets go BRRRRR
-  damage: 15
-  shotPoint: {fileID: 0}
+  buffs: []

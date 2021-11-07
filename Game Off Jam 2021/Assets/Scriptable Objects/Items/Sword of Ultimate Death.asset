@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0692c9483ab4d6468b42b0f50167bba, type: 3}
   m_Name: Sword of Ultimate Death
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4886363918456236381, guid: eddc257e04ab0f04d994e1888df94eb2, type: 3}
+  id: 0
+  uiIcon: {fileID: 21300000, guid: 9f2e58856f76e434792bc9aae5cbce4e, type: 3}
   type: 2
   description: Hahahah u died infintely noob
-  damage: 15
-  attackRange: 2
+  buffs: []

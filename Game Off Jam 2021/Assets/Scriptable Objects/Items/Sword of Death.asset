@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0692c9483ab4d6468b42b0f50167bba, type: 3}
   m_Name: Sword of Death
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4886363918456236381, guid: 5e18bd12a7d6ad14d8678fa4f195c529, type: 3}
+  id: 0
+  uiIcon: {fileID: 21300000, guid: 39234ce17788ded4c9d6c2fcb503d47e, type: 3}
   type: 2
   description: Hahahah u died noob
-  damage: 12
-  attackRange: 2
+  buffs: []

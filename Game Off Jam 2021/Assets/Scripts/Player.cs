@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     public InventoryObject inventory;
 
+    public MouseItem mouseItem = new MouseItem();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            inventory.Save();
+        }
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            inventory.Load();
+            
+        }
     }
 
     public void TakeDamage()
@@ -38,16 +48,16 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other) 
     {
-        var item = other.GetComponent<Item>();
+        var item = other.GetComponent<GroundItem>();
         if(item)
         {
-            inventory.AddItem(item.item, 1);
+            inventory.AddItem(new Item(item.item), 1);
             Destroy(other.gameObject);
         }
     }
-
+    
     private void OnApplicationQuit() 
     {
-        inventory.Container.Clear();
+        inventory.Container.Items = new InventorySlot[30];
     }
 }
