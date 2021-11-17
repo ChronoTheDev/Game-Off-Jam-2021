@@ -12,28 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082289b010bcbd64d81c77e668bf2c3c, type: 3}
   m_Name: Equipment
   m_EditorClassIdentifier: 
-  savePath: 
+  savePath: /Equipment.Save
   database: {fileID: 11400000, guid: 23d0d9f7f9adae7449f5c72b5eb8e331, type: 2}
+  type: 1
   Container:
-    Items:
-    - parent: {fileID: 0}
-      id: -1
+    Slots:
+    - allowedItems: 00000000010000000200000003000000
       item:
         name: 
-        id: 0
+        id: -1
         buffs: []
       amount: 0
-    - parent: {fileID: 0}
-      id: -1
+    - allowedItems: 00000000010000000200000003000000
       item:
         name: 
-        id: 0
+        id: -1
         buffs: []
       amount: 0
-    - parent: {fileID: 0}
-      id: -1
+    - allowedItems: 00000000010000000200000003000000
       item:
         name: 
-        id: 0
+        id: -1
         buffs: []
       amount: 0

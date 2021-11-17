@@ -6,9 +6,5 @@ using UnityEngine;
 public class MeleeObject : ItemObject
 {
 
-    private void Awake() 
-    {
-        type = ItemType.Melee;
-
-    }
+    
 }

@@ -15,12 +15,13 @@ public enum Attributes
 }
 public abstract class ItemObject : ScriptableObject
 {
-    public int id;
     public Sprite uiIcon;
+    public GameObject characterDisplay;
+    public bool stackable;
     public ItemType type;
     [TextArea(15, 20)]
     public string description;
-    public ItemBuff[] buffs;
+    public Item data = new Item();
 
     public Item CreateItem()
     {
@@ -34,7 +35,7 @@ public abstract class ItemObject : ScriptableObject
 public class Item
 {
     public string name;
-    public int id;
+    public int id = -1;
     public ItemBuff[] buffs;
     public Item()
     {
@@ -44,14 +45,14 @@ public class Item
     public Item(ItemObject item)
     {
         name = item.name;
-        id = item.id;
-        buffs = new ItemBuff[item.buffs.Length];
+        id = item.data.id;
+        buffs = new ItemBuff[item.data.buffs.Length];
         for (int i = 0; i < buffs.Length; i++)
         {
             
-            buffs[i] = new ItemBuff(item.buffs[i].min, item.buffs[i].max)
+            buffs[i] = new ItemBuff(item.data.buffs[i].min, item.data.buffs[i].max)
             {
-                attribute = item.buffs[i].attribute
+                attribute = item.data.buffs[i].attribute
             };
             
         }
@@ -59,7 +60,7 @@ public class Item
 }
 
 [System.Serializable]
-public class ItemBuff
+public class ItemBuff: IModifiers
 {
     public Attributes attribute;
     public int value;
@@ -72,6 +73,12 @@ public class ItemBuff
         max = _max;
         GenerateValue();
     }
+
+    public void AddValue(ref int baseValue)
+    {
+        baseValue += value;
+    }
+
     public void GenerateValue()
     {
         value = UnityEngine.Random.Range(min, max);

@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac6406863d41434baf81fdb1933d5f0, type: 3}
   m_Name: Bones
   m_EditorClassIdentifier: 
-  id: 0
   uiIcon: {fileID: 21300000, guid: 167b2c8e956065141b1f7d3b2c99eb09, type: 3}
+  characterDisplay: {fileID: 21300000, guid: ee1938cfc233d2b418b2bb3fe17a624c, type: 3}
+  stackable: 1
   type: 3
   description: Leftover of humanoid entities you destroyed
-  buffs: []
+  data:
+    name: 
+    id: 4
+    buffs: []

@@ -6,9 +6,11 @@ using UnityEngine;
 public class GunObject : ItemObject
 {
     
-    private void Awake() 
+    private void Update() 
     {
-        type = ItemType.Gun;
-
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            Debug.Log("Shots fired");
+        }
     }
 }
