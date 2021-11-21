@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator anim;
     public float moveSpeed;
     private Vector2 moveDir;
 
@@ -19,6 +20,28 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDir.x = Input.GetAxisRaw("Horizontal");
         moveDir.y = Input.GetAxisRaw("Vertical");
+        
+        
+        
+        if(moveDir.x == 0)
+        {
+            anim.SetBool("isWalking", false);
+
+            if(moveDir.y == 0)
+            {
+                anim.SetBool("isWalking", false);
+            }else
+            {
+                 anim.SetBool("isWalking", true);
+            }
+        }else
+        {
+            anim.SetBool("isWalking", true);
+            
+        }
+        
+
+        
     }
 
     void FixedUpdate() 

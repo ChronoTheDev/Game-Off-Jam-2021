@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
     public float range;
     public float fireRate;
 
+    
+
     public float reloadTime;
     private float nextTimeToFire = 0f;
     
@@ -25,7 +27,7 @@ public class Gun : MonoBehaviour
     private float offset;
 
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         damage = doDamage;
@@ -72,6 +74,7 @@ public class Gun : MonoBehaviour
                 rb.AddForce(shotPoints[i].right * bulletSpeed, ForceMode2D.Impulse);
             }
             
+
             currentMagCapacity--;
         }
         

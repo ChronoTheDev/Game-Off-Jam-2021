@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c60013a2d13c974db65806d051cc7d0, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 21300000, guid: b6de5495f18f7e34eb1d5fa1f0364640, type: 3}
-  characterDisplay: {fileID: 1555897084385772590, guid: ed3230dd4307e414a8c5f61e4459de60, type: 3}
+  uiIcon: {fileID: -5045984596465837579, guid: 567e946ad9eb2924aac4c4cc48f43ab7, type: 3}
+  characterDisplay: {fileID: 5965653586313421502, guid: b7976a81c8107f24283c9f311705c860, type: 3}
   stackable: 0
   type: 0
   description: Bullets go pew pew

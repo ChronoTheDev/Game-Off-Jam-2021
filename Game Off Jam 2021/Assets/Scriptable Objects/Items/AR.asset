@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c60013a2d13c974db65806d051cc7d0, type: 3}
   m_Name: AR
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 21300000, guid: 0f91d8417abeac54d95d965fc834953c, type: 3}
-  characterDisplay: {fileID: 2613860041644255366, guid: d4c3c7f4841c6594c87e4cc927737485, type: 3}
+  uiIcon: {fileID: 3211012000428042955, guid: 567e946ad9eb2924aac4c4cc48f43ab7, type: 3}
+  characterDisplay: {fileID: 5619979538066347471, guid: 9944070b4299061409596f00e4212087, type: 3}
   stackable: 0
   type: 0
   description: Bullets go BRRRRR

@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     private Transform melee;
     public Transform weaponPosition;
 
+    public Animator anim;
+
     public Attribute[] attributes;
     // public MouseItem mouseItem = new MouseItem();
 
@@ -45,8 +47,7 @@ public class Player : MonoBehaviour
             case InterfaceType.Inventory:
             break;
             case InterfaceType.Equipment:
-            print(string.Concat("Removed ", _slot.ItemObject, " on ", _slot.parent.inventory.type , " Allowed Items:" , string.Join(" , ", _slot.allowedItems)));
-
+            
             for (int i = 0; i  < _slot.item.buffs.Length; i++)
             {
                 for (int j = 0; j < attributes.Length; j++)
@@ -79,7 +80,6 @@ public class Player : MonoBehaviour
             break;
             
         }
-        print("Before Update");
     }
     public void OnAddItem(InventorySlot _slot)
     {
@@ -93,7 +93,6 @@ public class Player : MonoBehaviour
             
             break;
             case InterfaceType.Equipment:
-            print(string.Concat("Placed ", _slot.ItemObject, " on ", _slot.parent.inventory.type , " Allowed Items:" , string.Join(" , ", _slot.allowedItems)));
             for (int i = 0; i  < _slot.item.buffs.Length; i++)
             {
                 for (int j = 0; j < attributes.Length; j++)
@@ -126,7 +125,6 @@ public class Player : MonoBehaviour
             break;
             
         }
-        print("After Update");
     }
 
     // Update is called once per frame
@@ -143,11 +141,17 @@ public class Player : MonoBehaviour
             equipment.Load();
             
         }
+
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            TakeDamage(10);
+        }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        currentHealth = maxHealth;
+        currentHealth -= damage;
+        anim.SetTrigger("isHurt");
         if(currentHealth <= 0)
         {
             Die();
