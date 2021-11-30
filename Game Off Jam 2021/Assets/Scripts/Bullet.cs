@@ -10,11 +10,13 @@ public class Bullet : MonoBehaviour
     private float totalDistance;
     private Vector3 lastPos;
 
+    public GameObject effect;
     
     // Start is called before the first frame update
     void Start()
     {
         lastPos = transform.position;
+        Physics.IgnoreLayerCollision(6, 6);
     }
 
     // Update is called once per frame
@@ -30,21 +32,24 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    // void OnTriggerEnter2D(Collider2D other) 
-    // {
-            
-            
-    //     if(other.gameObject.CompareTag("Enemy"))
-    //     {
-    //         //Let enemy take damage
-    //         DestroyBullet();
-    //     }
-    // }
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        
+        Enemy enemy = other.GetComponent<Enemy>();
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            enemy.TakeDamage(Gun.doDamage);
+            DestroyBullet();
+        }
+        
+    }
     
 
     void DestroyBullet()
     {
-        //TODO: Play some particles
+        
+        FindObjectOfType<AudioManager>().Play("Bullet_HitWall");
+        Instantiate(effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

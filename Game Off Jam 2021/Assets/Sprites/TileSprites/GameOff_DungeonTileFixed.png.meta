@@ -4,52 +4,52 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -2936131627227127005
-    second: TileWallCorner_UpperLeft
+    second: WallCorner_LeftUp
   - first:
       213: 3987877771285269304
-    second: TileWall_Up
+    second: WallSide_Up
   - first:
       213: -824087846114411483
-    second: TileWall_UpRepeating
+    second: WallSide_UpRepeated
   - first:
       213: 4348504774674605572
-    second: TileWallCorner_UpperRight
+    second: WallCorner_RightUp
   - first:
       213: 1114090589007921802
-    second: TileWall_Left
+    second: WallSide_Left
   - first:
       213: -8955271818417463628
-    second: GameOff_DungeonTileFixed_5
+    second: Wall
   - first:
       213: -8071030092765792602
-    second: GameOff_DungeonTileFixed_6
+    second: WallRepeated
   - first:
       213: -6700878511842583611
-    second: TileWall_Right
+    second: WallSide_Right
   - first:
       213: 1973310628744352188
-    second: TileWall_LeftRepeating
+    second: WallSide_LeftRepeated
   - first:
       213: 6252967031366204175
-    second: GameOff_DungeonTileFixed_9
+    second: Floor
   - first:
       213: -3090328287192089708
-    second: GameOff_DungeonTileFixed_10
+    second: FloorRepeated
   - first:
       213: -4278004866073720722
-    second: TileWall_RightRepeating
+    second: WallSide_RightRepeated
   - first:
       213: 408083519819014319
-    second: TileWallCorner_BottomLeft
+    second: WallCorner_LeftDown
   - first:
       213: -1853460925392349687
-    second: TileWall_Down
+    second: WallSide_Down
   - first:
       213: -4586236081491822174
-    second: TileWall_DownRepeating
+    second: WallSide_DownRepeated
   - first:
       213: -3089601965873471899
-    second: TileWallCorner_BottomRight
+    second: WallCorner_RightDown
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileWallCorner_UpperLeft
+      name: WallCorner_LeftUp
       rect:
         serializedVersion: 2
         x: 0
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWall_Up
+      name: WallSide_Up
       rect:
         serializedVersion: 2
         x: 16
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWall_UpRepeating
+      name: WallSide_UpRepeated
       rect:
         serializedVersion: 2
         x: 32
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWallCorner_UpperRight
+      name: WallCorner_RightUp
       rect:
         serializedVersion: 2
         x: 48
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWall_Left
+      name: WallSide_Left
       rect:
         serializedVersion: 2
         x: 0
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameOff_DungeonTileFixed_5
+      name: Wall
       rect:
         serializedVersion: 2
         x: 16
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameOff_DungeonTileFixed_6
+      name: WallRepeated
       rect:
         serializedVersion: 2
         x: 32
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWall_Right
+      name: WallSide_Right
       rect:
         serializedVersion: 2
         x: 48
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWall_LeftRepeating
+      name: WallSide_LeftRepeated
       rect:
         serializedVersion: 2
         x: 0
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameOff_DungeonTileFixed_9
+      name: Floor
       rect:
         serializedVersion: 2
         x: 16
@@ -349,7 +349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameOff_DungeonTileFixed_10
+      name: FloorRepeated
       rect:
         serializedVersion: 2
         x: 32
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWall_RightRepeating
+      name: WallSide_RightRepeated
       rect:
         serializedVersion: 2
         x: 48
@@ -391,7 +391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWallCorner_BottomLeft
+      name: WallCorner_LeftDown
       rect:
         serializedVersion: 2
         x: 0
@@ -412,7 +412,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWall_Down
+      name: WallSide_Down
       rect:
         serializedVersion: 2
         x: 16
@@ -433,7 +433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWall_DownRepeating
+      name: WallSide_DownRepeated
       rect:
         serializedVersion: 2
         x: 32
@@ -454,7 +454,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileWallCorner_BottomRight
+      name: WallCorner_RightDown
       rect:
         serializedVersion: 2
         x: 48

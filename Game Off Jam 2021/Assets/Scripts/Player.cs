@@ -18,7 +18,8 @@ public class Player : MonoBehaviour
     public Animator anim;
 
     public Attribute[] attributes;
-    // public MouseItem mouseItem = new MouseItem();
+
+    public GameObject effect;
 
     // Start is called before the first frame update
     void Start()
@@ -152,6 +153,7 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         anim.SetTrigger("isHurt");
+        FindObjectOfType<AudioManager>().Play("Hurt");
         if(currentHealth <= 0)
         {
             Die();
@@ -160,7 +162,8 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        //Play death animation
+        Instantiate(effect, transform.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("PlayerDead");
         Destroy(gameObject);
     }
 

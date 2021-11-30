@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c60013a2d13c974db65806d051cc7d0, type: 3}
+  m_Name: SMG
+  m_EditorClassIdentifier: 
+  uiIcon: {fileID: -3443745371137659744, guid: 567e946ad9eb2924aac4c4cc48f43ab7, type: 3}
+  characterDisplay: {fileID: 5619979538066347471, guid: 46ad24a259561aa4092aa0196397a590, type: 3}
+  stackable: 0
+  type: 0
+  description: Bullets go BRRRRR
+  data:
+    name: 
+    id: 5
+    buffs:
+    - attribute: 0
+      value: 5
+      min: 5
+      max: 7

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public int doDamage;
+    public static int doDamage;
     public int damage;
     public float bulletSpeed;
     public float range;
@@ -24,14 +24,20 @@ public class Gun : MonoBehaviour
 
     public Transform[] shotPoints;
     public GameObject bulletPrefab;
-    private float offset;
+    public GameObject effect;
+    
 
 
     
     void Start()
     {
-        damage = doDamage;
+        doDamage = damage;
         maxMagCapacity = currentMagCapacity;
+    }
+
+    void OnEnable() 
+    {
+        isReloading = false;
     }
 
     // Update is called once per frame
@@ -63,8 +69,9 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         //TODO: Play Animation
-        //TODO: Spawn Particles
-        //TODO: Play Sound
+        
+
+        
         if(currentMagCapacity > 0)
         {
             for (int i = 0; i < shotPoints.Length; i++)
@@ -72,6 +79,8 @@ public class Gun : MonoBehaviour
                 GameObject bullet = Instantiate(bulletPrefab, shotPoints[i].position, shotPoints[i].rotation);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 rb.AddForce(shotPoints[i].right * bulletSpeed, ForceMode2D.Impulse);
+                FindObjectOfType<AudioManager>().Play("Shoot");
+                Instantiate(effect, shotPoints[i].position, Quaternion.identity);
             }
             
 
